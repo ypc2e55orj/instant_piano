@@ -8,6 +8,7 @@
         "math.h": "c",
         "arm_math.h": "c",
         "segger_rtt.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "debug.h": "c"
     }
 }
