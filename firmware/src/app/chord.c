@@ -17,8 +17,10 @@ typedef struct _CHORD
   uint16_t notes;
 } Chord;
 
+#ifdef __DEBUG
 static const char *const noteName[CHORD_NOTE_NUM] = {"C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C "};
 static const int scaleOffset[CHORD_NOTE_NUM] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1};
+#endif
 
 static volatile Chord chord = {0};
 
