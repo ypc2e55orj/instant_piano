@@ -6,7 +6,7 @@
                 "${default}",
                 "${workspaceFolder}/firmware/src/config/default",
                 "${workspaceFolder}/firmware/src/packs/ATSAMD21G18A_DFP",
-                "${workspaceFolder}/firmware/src/packs/CMSIS/CMSIS/Core/Include",
+                "${workspaceFolder}/firmware/src/packs/CMSIS/CMSIS/Core/Include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
