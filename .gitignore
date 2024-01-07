@@ -1,0 +1,14 @@
+# generated src files
+firmware/src/config
+firmware/src/packs
+firmware/src/SEGGER
+firmware/src/third_party
+
+# generated binaries
+firmware/instant_piano.X/*
+!firmware/instant_piano.X/Makefile
+!firmware/instant_piano.X/instant_piano.mc3
+!firmware/instant_piano.X/nbproject
+firmware/instant_piano.X/nbproject/*
+!firmware/instant_piano.X/nbproject/configurations.xml
+!firmware/instant_piano.X/nbproject/project.xml

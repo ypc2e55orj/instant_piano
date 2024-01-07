@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<JScopeProject>
+    <FileVersion major="1" minor="1" />
+    <Project>
+        <Configuration>
+            <JLink>
+                <Options Connection="1" IsRTTSession="1" IsRTTWithTimeStamp="0" SamplingPeriod="100" SerialNo="0" JTAG_IRPre="0" JTAG_DRPre="0" IP="" TargetDevice="ATSAMD21G18A" TargetInterface="SWD" InterfaceSpeed="4000" />
+            </JLink>
+            <ElfFile Name="" />
+            <Scope>
+                <Options TimeResolutionUs="1000000" />
+            </Scope>
+        </Configuration>
+        <Windows>
+            <Graph Show="1" />
+            <Watch Show="1" />
+        </Windows>
+        <SelectedSymbols>
+            <Symbol>
+                <Options Name="4 Byte unsigned RTT Data" Address="0x00000000" Type="" TypeID="8" Size="4" GraphColorRed="255" GraphColorGreen="0" GraphColorBlue="0" YMinSampled="0" YMaxSampled="4.27819e+09" YAvgSampled="3.17637e+07" Offset="0" ShowInGraph="1" YOffset="0" IsAutoConfig="0" YResolution="2000000000" MaxValue="0" File="" DrawStyle="0" NameWithParents="4 Byte unsigned RTT Data" />
+            </Symbol>
+        </SelectedSymbols>
+    </Project>
+</JScopeProject>

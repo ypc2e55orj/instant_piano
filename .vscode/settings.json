@@ -1,0 +1,13 @@
+{
+    "files.eol": "\n",
+    "files.encoding": "utf8",
+    "editor.useTabStops": false,
+    "editor.tabSize": 2,
+    "files.associations": {
+        "definitions.h": "c",
+        "math.h": "c",
+        "arm_math.h": "c",
+        "segger_rtt.h": "c",
+        "stdint.h": "c"
+    }
+}

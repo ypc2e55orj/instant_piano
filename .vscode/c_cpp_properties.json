@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/firmware/src/config/default",
+                "${workspaceFolder}/firmware/src/packs/ATSAMD21G18A_DFP",
+                "${workspaceFolder}/firmware/src/packs/CMSIS/CMSIS/Core/Include",
+                "${workspaceFolder}/firmware/src/packs/CMSIS/CMSIS/DSP/Include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
