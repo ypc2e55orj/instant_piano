@@ -1,7 +1,8 @@
 # generated src files
 firmware/src/config
 firmware/src/packs
-firmware/src/SEGGER
+firmware/src/SEGGER/*
+!firmware/src/SEGGER/reent.h
 firmware/src/third_party
 
 # generated binaries

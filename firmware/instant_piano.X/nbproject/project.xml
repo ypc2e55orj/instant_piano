@@ -6,7 +6,7 @@
             <name>instant_piano</name>
             <creation-uuid>89ea0685-a884-4902-995f-c6978c9c1482</creation-uuid>
             <make-project-type>0</make-project-type>
-            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>../src/SEGGER</sourceRootElem>

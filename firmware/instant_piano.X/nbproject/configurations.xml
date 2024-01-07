@@ -138,11 +138,16 @@
           <itemPath>../src/SEGGER/Config/SEGGER_RTT_Conf.h</itemPath>
           <itemPath>../src/SEGGER/Config/SEGGER_SYSVIEW_Conf.h</itemPath>
         </logicalFolder>
-        <itemPath>../src/SEGGER/SEGGER.h</itemPath>
-        <itemPath>../src/SEGGER/SEGGER_RTT.h</itemPath>
-        <itemPath>../src/SEGGER/SEGGER_SYSVIEW.h</itemPath>
-        <itemPath>../src/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h</itemPath>
-        <itemPath>../src/SEGGER/SEGGER_SYSVIEW_Int.h</itemPath>
+        <logicalFolder name="SEGGER" displayName="SEGGER" projectFiles="true">
+          <logicalFolder name="Syscalls" displayName="Syscalls" projectFiles="true">
+          </logicalFolder>
+          <itemPath>../src/SEGGER/SEGGER/SEGGER.h</itemPath>
+          <itemPath>../src/SEGGER/SEGGER/SEGGER_RTT.h</itemPath>
+          <itemPath>../src/SEGGER/SEGGER/SEGGER_SYSVIEW.h</itemPath>
+          <itemPath>../src/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h</itemPath>
+          <itemPath>../src/SEGGER/SEGGER/SEGGER_SYSVIEW_Int.h</itemPath>
+        </logicalFolder>
+        <itemPath>../src/SEGGER/reent.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -193,15 +198,19 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="SEGGER" displayName="SEGGER" projectFiles="true">
-        <logicalFolder name="Syscalls" displayName="Syscalls" projectFiles="true">
-          <itemPath>../src/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c</itemPath>
-          <itemPath>../src/SEGGER/Syscalls/SEGGER_RTT_Syscalls_IAR.c</itemPath>
-          <itemPath>../src/SEGGER/Syscalls/SEGGER_RTT_Syscalls_KEIL.c</itemPath>
-          <itemPath>../src/SEGGER/Syscalls/SEGGER_RTT_Syscalls_SES.c</itemPath>
+        <logicalFolder name="Config" displayName="Config" projectFiles="true">
         </logicalFolder>
-        <itemPath>../src/SEGGER/SEGGER_RTT.c</itemPath>
-        <itemPath>../src/SEGGER/SEGGER_RTT_printf.c</itemPath>
-        <itemPath>../src/SEGGER/SEGGER_SYSVIEW.c</itemPath>
+        <logicalFolder name="SEGGER" displayName="SEGGER" projectFiles="true">
+          <logicalFolder name="Syscalls" displayName="Syscalls" projectFiles="true">
+            <itemPath>../src/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_GCC.c</itemPath>
+            <itemPath>../src/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_IAR.c</itemPath>
+            <itemPath>../src/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_KEIL.c</itemPath>
+            <itemPath>../src/SEGGER/SEGGER/Syscalls/SEGGER_RTT_Syscalls_SES.c</itemPath>
+          </logicalFolder>
+          <itemPath>../src/SEGGER/SEGGER/SEGGER_RTT.c</itemPath>
+          <itemPath>../src/SEGGER/SEGGER/SEGGER_RTT_printf.c</itemPath>
+          <itemPath>../src/SEGGER/SEGGER/SEGGER_SYSVIEW.c</itemPath>
+        </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
@@ -263,7 +272,6 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -288,6 +296,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
+        <appendMe value="-D_ssize_t=long -I&quot;../src/SEGGER/&quot; -I&quot;../src/SEGGER/Config&quot; -I&quot;../src/SEGGER/SEGGER&quot;"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -320,7 +329,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -360,7 +368,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
