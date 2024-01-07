@@ -40,13 +40,13 @@ void Chord_Initialize(uint32_t baseClockFreq, uint32_t pwmMaxDuty)
 static double Chord_CalculateNoteFrequency(int numScale, enum Note note)
 {
   const int noteOffset = 3;
-  const double aNoteFreq = 27.5 * pow(2.0, numScale);
+  const double aNoteFreq = 13.75 * pow(2.0, numScale);
   return (pow(exp(1.0 / 12.0 * log(2.0)), note + noteOffset) * aNoteFreq);
 }
 
 void Chord_SetScale(int scale)
 {
-  for (enum Note note = CHORD_NOTE_FIRST; note < CHORD_NOTE_NUM; note++)
+  for (enum Note note = CHORD_NOTE_HEAD; note < CHORD_NOTE_NUM; note++)
   {
     double noteFreq = Chord_CalculateNoteFrequency(scale, note);
     chord.sinSkipCount[note] = round(CHORD_SINE_NUM_SAMPLES * noteFreq / chord.pwmIsrFreq);
@@ -63,7 +63,7 @@ uint32_t Chord_CalculateDuty()
 {
   uint32_t pwmDuty = 0;
   int nNotes = 0;
-  for (enum Note note = CHORD_NOTE_FIRST; note < CHORD_NOTE_NUM; note++)
+  for (enum Note note = CHORD_NOTE_HEAD; note < CHORD_NOTE_NUM; note++)
   {
     if ((chord.notes & (1 << note)))
     {
@@ -73,8 +73,7 @@ uint32_t Chord_CalculateDuty()
     }
 
     // Update skip index
-    chord.sinSkipIndex[note] += chord.sinSkipCount[note];
-    if (chord.sinSkipIndex[note] >= CHORD_SINE_NUM_SAMPLES)
+    if ((chord.sinSkipIndex[note] += chord.sinSkipCount[note]) >= CHORD_SINE_NUM_SAMPLES)
     {
       chord.sinSkipIndex[note] = 0;
     }

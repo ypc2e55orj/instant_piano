@@ -11,50 +11,68 @@
 #include "app/chord.h"
 #include "app/debug.h"
 
-#define NUM_BUTTONS 8
+enum Button
+{
+  BUTTON_HEAD,
+  BUTTON_C = BUTTON_HEAD,
+  BUTTON_D,
+  BUTTON_E,
+  BUTTON_F,
+  BUTTON_G,
+  BUTTON_A,
+  BUTTON_B,
+  BUTTON_CH,
+  BUTTON_NUM,
+};
 
-void UpdateButton()
+uint16_t GetPressedButtons()
+{
+  uint16_t pressedButtons = 0;
+  uint8_t buttons[BUTTON_NUM] = {
+      ButtonC_Get(),
+      ButtonD_Get(),
+      ButtonE_Get(),
+      ButtonF_Get(),
+      ButtonG_Get(),
+      ButtonA_Get(),
+      ButtonB_Get(),
+      ButtonCn_Get(),
+  };
+
+  for (enum Button n = BUTTON_HEAD; n < BUTTON_NUM; n++)
+  {
+    if (buttons[n]) {
+      pressedButtons |= 1 << n;
+    }
+  }
+  pressedButtons ? WhiteLed_Set() : WhiteLed_Clear();
+
+  return pressedButtons;
+}
+
+uint16_t GetPressedNotes(uint16_t pressedButton)
 {
   uint16_t pressedNotes = 0;
-  uint8_t buttons[NUM_BUTTONS] = {
-    ButtonC_Get(),
-    ButtonD_Get(),
-    ButtonE_Get(),
-    ButtonF_Get(),
-    ButtonG_Get(),
-    ButtonA_Get(),
-    ButtonB_Get(),
-    ButtonCn_Get()
-  };
-  enum Note notes[NUM_BUTTONS] = {
-    CHORD_NOTE_C,
-    CHORD_NOTE_D,
-    CHORD_NOTE_E,
-    CHORD_NOTE_F,
-    CHORD_NOTE_G,
-    CHORD_NOTE_A,
-    CHORD_NOTE_B,
-    CHORD_NOTE_CH,
+  enum Note notes[BUTTON_NUM] = {
+      CHORD_NOTE_C,
+      CHORD_NOTE_D,
+      CHORD_NOTE_E,
+      CHORD_NOTE_F,
+      CHORD_NOTE_G,
+      CHORD_NOTE_A,
+      CHORD_NOTE_B,
+      CHORD_NOTE_CH,
   };
 
-  for (int i = 0; i < NUM_BUTTONS; i++)
+  for (enum Button n = 0; n < BUTTON_NUM; n++)
   {
-    if (buttons[i])
+    if (pressedButton & (1 << n))
     {
-      pressedNotes |= (1 << notes[i]);
+      pressedNotes |= 1 << notes[n];
     }
   }
 
-  Chord_SetNotes(pressedNotes);
-
-  if (pressedNotes)
-  {
-    WhiteLed_Set();
-  }
-  else
-  {
-    WhiteLed_Clear();
-  }
+  return pressedNotes;
 }
 
 void TCC_PeriodEventHandler(uint32_t status, uintptr_t context)
@@ -64,22 +82,28 @@ void TCC_PeriodEventHandler(uint32_t status, uintptr_t context)
 
 int main(void)
 {
+  uint16_t pressedButtons = 0;
+
   SYS_Initialize(NULL);
   Debug_Initialize();
-
-  Chord_Initialize(CPU_CLOCK_FREQUENCY, TCC0_PWM24bitPeriodGet());
-  Chord_SetScale(5);
-
-  TCC0_PWMCallbackRegister(TCC_PeriodEventHandler, (uintptr_t)NULL);
-  TCC0_PWMStart();
 
   YellowLed_Clear();
   RxLed_Set();
   TxLed_Set();
 
+  Chord_Initialize(CPU_CLOCK_FREQUENCY, TCC0_PWM24bitPeriodGet());
+  TCC0_PWMCallbackRegister(TCC_PeriodEventHandler, (uintptr_t)NULL);
+
+  do
+  {
+    pressedButtons = GetPressedButtons();
+  } while (!pressedButtons);
+  Chord_SetScale(__builtin_ffs(pressedButtons));
+  TCC0_PWMStart();
+
   while (true)
   {
-    UpdateButton();
+    Chord_SetNotes(GetPressedNotes(GetPressedButtons()));
     SYS_Tasks();
   }
 
