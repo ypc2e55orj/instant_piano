@@ -3,8 +3,6 @@
 #include <stdint.h>
 #include <math.h>
 
-#include "debug.h"
-
 #define CHORD_SINE_NUM_SAMPLES 8191
 
 typedef struct _CHORD
@@ -16,11 +14,6 @@ typedef struct _CHORD
   uint16_t sinSkipIndex[CHORD_NOTE_NUM];
   uint16_t notes;
 } Chord;
-
-#ifdef __DEBUG
-static const char *const noteName[CHORD_NOTE_NUM] = {"C ", "C#", "D ", "D#", "E ", "F ", "F#", "G ", "G#", "A ", "A#", "B ", "C "};
-static const int scaleOffset[CHORD_NOTE_NUM] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1};
-#endif
 
 static volatile Chord chord = {0};
 
@@ -34,9 +27,6 @@ void Chord_Initialize(uint32_t baseClockFreq, uint32_t pwmMaxDuty)
     double phase = sin(2.0 * M_PI * 1.0 / (double)CHORD_SINE_NUM_SAMPLES * (double)nSample);
     chord.sinSamples[nSample] = (phase + 1.0) / 2.0 * pwmMaxDuty;
   }
-
-  Debug_Printf("pwmMaxDuty: %d\r\n", chord.pwmMaxDuty);
-  Debug_Printf("pwmIsrFreq: %d\r\n", chord.pwmIsrFreq);
 }
 
 static double Chord_CalculateNoteFrequency(int numScale, enum Note note)
@@ -52,7 +42,6 @@ void Chord_SetScale(int scale)
   {
     double noteFreq = Chord_CalculateNoteFrequency(scale, note);
     chord.sinSkipCount[note] = round(CHORD_SINE_NUM_SAMPLES * noteFreq / chord.pwmIsrFreq);
-    Debug_Printf("%s%d (%d Hz): %d skip\r\n", noteName[note], scale + scaleOffset[note], (int)noteFreq, chord.sinSkipCount[note]);
   }
 }
 

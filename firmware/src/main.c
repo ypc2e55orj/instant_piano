@@ -6,10 +6,9 @@
 #include <math.h>
 
 // mplab x
-#include "../config/default/definitions.h"
+#include "config/default/definitions.h"
 
-#include "app/chord.h"
-#include "app/debug.h"
+#include "chord.h"
 
 enum Button
 {
@@ -85,7 +84,6 @@ int main(void)
   uint16_t pressedButtons = 0;
 
   SYS_Initialize(NULL);
-  Debug_Initialize();
 
   YellowLed_Clear();
   RxLed_Set();
