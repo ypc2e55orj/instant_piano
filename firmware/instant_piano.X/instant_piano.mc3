@@ -1596,7 +1596,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PIN_3_FUNCTION_NAME&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;Ws2812b&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;Ws2812&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -5622,7 +5622,7 @@
       </entry>
       <entry>
          <file>../src/config/default/peripheral/port/plib_port.h</file>
-         <hash>628122980b8380b7a2a6281a2c7ea3014509698e3ced829cb063b361185e2dc9</hash>
+         <hash>6b8bba671ed8414799ee6a9c0f91d3383ab603456a80420cb613de5ce50b488d</hash>
       </entry>
       <entry>
          <file>../src/config/default/peripheral/port/plib_port.c</file>
@@ -5802,7 +5802,7 @@
       </entry>
       <entry>
          <file>../src/config/default/pin_configurations.csv</file>
-         <hash>9a058f2dfb2352f42e7cea1e6c61b71dc9cd092cbdb797677e056a718206b93c</hash>
+         <hash>e276a3ed7c2cf57f3d72de156af3a1eceaf3062e9f26cd81412d1a01e17f4542</hash>
       </entry>
       <entry>
          <file>../src/packs/ATSAMD21G18A_DFP/instance/tc7.h</file>
