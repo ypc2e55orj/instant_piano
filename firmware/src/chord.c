@@ -3,8 +3,10 @@
 #include <stdint.h>
 #include <math.h>
 
+// define
 #define CHORD_SINE_NUM_SAMPLES 8191
 
+// typedef
 typedef struct _CHORD
 {
   uint32_t pwmMaxDuty;
@@ -14,8 +16,42 @@ typedef struct _CHORD
   uint16_t sinSkipIndex[CHORD_NOTE_NUM];
   uint16_t notes;
 } Chord;
+typedef double (*CalculateNoteFrequencyType)(int numOctave, enum Note note);
 
+// prototype
+static double Chord_CalculateNoteFrequencyEqualTemperament(int numOctave, enum Note note);
+static double Chord_CalculateNoteFrequencyJustIntonation(int numOctave, enum Note note);
+static double Chord_CalculateNoteFrequencyPythagoreanTuning(int numOctave, enum Note note);
+
+// variables
 static volatile Chord chord = {0};
+static const CalculateNoteFrequencyType Chord_CalculateNoteFrequency[CHORD_FREQ_RATIO_NUM] = {
+    Chord_CalculateNoteFrequencyEqualTemperament,
+    Chord_CalculateNoteFrequencyJustIntonation,
+    Chord_CalculateNoteFrequencyPythagoreanTuning,
+};
+
+static double Chord_CalculateNoteReferenceFrequency(int numOctave)
+{
+  return 27.5 * pow(2.0, numOctave);
+}
+static double Chord_CalculateNoteFrequencyEqualTemperament(int numOctave, enum Note note)
+{
+  const int noteOffset = 3;
+  return (pow(exp(1.0 / 12.0 * log(2.0)), note + noteOffset) * Chord_CalculateNoteReferenceFrequency(numOctave));
+}
+static double Chord_CalculateNoteFrequencyJustIntonation(int numOctave, enum Note note)
+{
+  double top[CHORD_NOTE_NUM] = {1.0, 16.0, 9.0, 6.0, 5.0, 4.0, 64.0, 3.0, 8.0, 5.0, 16.0, 15.0, 2.0};
+  double bottom[CHORD_NOTE_NUM] = {1.0, 15.0, 8.0, 5.0, 4.0, 3.0, 45.0, 2.0, 5.0, 3.0, 9.0, 8.0, 1.0};
+  double refFreq = 6.0 / 5.0 * Chord_CalculateNoteReferenceFrequency(numOctave);
+  return top[note] / bottom[note] * refFreq;
+}
+static double Chord_CalculateNoteFrequencyPythagoreanTuning(int numOctave, enum Note note)
+{
+  // not implemented yet
+  return 0.0;
+}
 
 void Chord_Initialize(uint32_t baseClockFreq, uint32_t pwmMaxDuty)
 {
@@ -29,18 +65,14 @@ void Chord_Initialize(uint32_t baseClockFreq, uint32_t pwmMaxDuty)
   }
 }
 
-static double Chord_CalculateNoteFrequency(int numScale, enum Note note)
+void Chord_SetScale(enum FrequencyRatio freqRatio, int numOctave)
 {
-  const int noteOffset = 3;
-  const double aNoteFreq = 13.75 * pow(2.0, numScale);
-  return (pow(exp(1.0 / 12.0 * log(2.0)), note + noteOffset) * aNoteFreq);
-}
+  if (freqRatio < 0 || CHORD_FREQ_RATIO_NUM <= freqRatio)
+    return;
 
-void Chord_SetScale(int scale)
-{
   for (enum Note note = CHORD_NOTE_HEAD; note < CHORD_NOTE_NUM; note++)
   {
-    double noteFreq = Chord_CalculateNoteFrequency(scale, note);
+    double noteFreq = Chord_CalculateNoteFrequency[freqRatio](numOctave, note);
     chord.sinSkipCount[note] = round(CHORD_SINE_NUM_SAMPLES * noteFreq / chord.pwmIsrFreq);
   }
 }

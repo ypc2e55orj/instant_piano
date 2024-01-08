@@ -58,9 +58,9 @@ uint16_t GetPressedNotes(uint16_t pressedButton)
       CHORD_NOTE_E,
       CHORD_NOTE_F,
       CHORD_NOTE_G,
-      CHORD_NOTE_A,
-      CHORD_NOTE_B,
-      CHORD_NOTE_CH,
+      CHORD_NOTE_A_H,
+      CHORD_NOTE_B_H,
+      CHORD_NOTE_C_H,
   };
 
   for (enum Button n = 0; n < BUTTON_NUM; n++)
@@ -96,7 +96,7 @@ int main(void)
   {
     pressedButtons = GetPressedButtons();
   } while (!pressedButtons);
-  Chord_SetScale(__builtin_ffs(pressedButtons));
+  Chord_SetScale(CHORD_FREQ_RATIO_JUST_INTONATION, __builtin_ffs(pressedButtons));
   TCC0_PWMStart();
 
   while (true)
