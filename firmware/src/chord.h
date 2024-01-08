@@ -3,8 +3,6 @@
 
 #include <stdint.h>
 
-#define CHORD_MAX 3
-
 enum FrequencyRatio
 {
   CHORD_FREQ_RATIO_EQUAL_TEMPERAMENT,
@@ -33,8 +31,9 @@ enum Note
 };
 
 void Chord_Initialize(uint32_t baseClockFreq, uint32_t pwmMaxDuty);
-void Chord_SetScale(enum FrequencyRatio temp, int numOctave);
+void Chord_SetScale(enum FrequencyRatio freqRatio, int numOctave);
 void Chord_SetNotes(uint16_t notes);
-uint32_t Chord_CalculateDuty();
 
+void Chord_Start();
+void Chord_Stop();
 #endif // CHROD_H

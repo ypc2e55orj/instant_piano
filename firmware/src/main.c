@@ -74,11 +74,6 @@ uint16_t GetPressedNotes(uint16_t pressedButton)
   return pressedNotes;
 }
 
-void TCC_PeriodEventHandler(uint32_t status, uintptr_t context)
-{
-  TCC0_PWM24bitDutySet(TCC0_CHANNEL2, Chord_CalculateDuty());
-}
-
 int main(void)
 {
   uint16_t pressedButtons = 0;
@@ -90,14 +85,12 @@ int main(void)
   TxLed_Set();
 
   Chord_Initialize(CPU_CLOCK_FREQUENCY, TCC0_PWM24bitPeriodGet());
-  TCC0_PWMCallbackRegister(TCC_PeriodEventHandler, (uintptr_t)NULL);
-
   do
   {
     pressedButtons = GetPressedButtons();
   } while (!pressedButtons);
   Chord_SetScale(CHORD_FREQ_RATIO_JUST_INTONATION, __builtin_ffs(pressedButtons));
-  TCC0_PWMStart();
+  Chord_Start();
 
   while (true)
   {
