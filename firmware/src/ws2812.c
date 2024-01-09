@@ -35,6 +35,7 @@ void Ws2812_Update()
   uint8_t *bufPtr = ws2812.outputBuffer;
   uint8_t bitMask = 0x80;
 
+  __disable_irq();
   while (true)
   {
     Ws2812_Set();
@@ -60,4 +61,5 @@ void Ws2812_Update()
   {
     asm volatile("nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; ");
   }
+  __enable_irq();
 }
