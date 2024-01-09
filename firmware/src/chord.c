@@ -27,7 +27,7 @@ static double Chord_CalculateNoteFrequencyPythagoreanTuning(int numOctave, enum 
 static void Chord_UpdateDutyIsr(uint32_t status, uintptr_t context);
 
 // variables
-static volatile struct Chord chord = {0};
+static struct Chord chord = {0};
 
 void Chord_Initialize(uint32_t baseClockFreq, uint32_t pwmMaxDuty)
 {
