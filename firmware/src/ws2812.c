@@ -1,6 +1,6 @@
 #include "ws2812.h"
 
-#include <stdlib.h>
+#include <string.h>
 #include <stdbool.h>
 
 #include "config/default/definitions.h"
@@ -9,21 +9,13 @@
 #define WS2812_BUFFER_SIZE (WS2812_COUNTS * WS2812_COLOR_DEPTH)
 
 // typedef
-typedef struct WS2812
+struct Ws2812
 {
   uint8_t outputBuffer[WS2812_BUFFER_SIZE];
-} Ws2812;
+};
 
 // variables
-static volatile Ws2812 ws2812 = {0};
-
-// prototype
-static void Ws2812_OutputIsr(TC_TIMER_STATUS status, uintptr_t context);
-
-void Ws2812_Initialize()
-{
-  TC3_TimerCallbackRegister(Ws2812_OutputIsr, (uintptr_t)NULL);
-}
+static struct Ws2812 ws2812 = {0};
 
 void Ws2812_SetBuffer(uint32_t pos, uint32_t color)
 {
@@ -39,8 +31,33 @@ void Ws2812_ClearBuffer()
 
 void Ws2812_Update()
 {
-}
+  const uint8_t *bufEnd = ws2812.outputBuffer + WS2812_BUFFER_SIZE;
+  uint8_t *bufPtr = ws2812.outputBuffer;
+  uint8_t bitMask = 0x80;
 
-static void Ws2812_OutputIsr(TC_TIMER_STATUS status, uintptr_t context)
-{
+  while (true)
+  {
+    Ws2812_Set();
+    if (*bufPtr & bitMask)
+    {
+      asm volatile("nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; ");
+    }
+    else
+    {
+      asm volatile("nop; nop; ");
+    }
+    Ws2812_Clear();
+    asm volatile("nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; ");
+
+    if (!(bitMask >>= 1))
+    {
+      bitMask = 0x80;
+      if (++bufPtr == bufEnd)
+        break;
+    }
+  }
+  for (int i = 0; i < 200; i++)
+  {
+    asm volatile("nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; nop; ");
+  }
 }

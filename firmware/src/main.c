@@ -9,6 +9,7 @@
 #include "config/default/definitions.h"
 
 #include "chord.h"
+#include "ws2812.h"
 
 enum Button
 {
@@ -40,7 +41,8 @@ uint16_t GetPressedButtons()
 
   for (enum Button n = BUTTON_HEAD; n < BUTTON_NUM; n++)
   {
-    if (buttons[n]) {
+    if (buttons[n])
+    {
       pressedButtons |= 1 << n;
     }
   }
@@ -83,6 +85,12 @@ int main(void)
   YellowLed_Clear();
   RxLed_Set();
   TxLed_Set();
+
+  for (int i = 0; i < 8; i++)
+  {
+    Ws2812_SetBuffer(i, 0x550000);
+  }
+  Ws2812_Update();
 
   Chord_Initialize(CPU_CLOCK_FREQUENCY, TCC0_PWM24bitPeriodGet());
   do

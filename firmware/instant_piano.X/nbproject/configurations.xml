@@ -133,6 +133,7 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/chord.h</itemPath>
+      <itemPath>../src/ws2812.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -184,6 +185,7 @@
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/chord.c</itemPath>
+      <itemPath>../src/ws2812.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
