@@ -22,10 +22,6 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
-         <string>tc3</string>
-         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
-      </entry>
-      <entry>
          <string>tc4</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
@@ -668,7 +664,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;414&quot; canvasWidth=&quot;426&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;575&quot; canvasWidth=&quot;146&quot; dnOrder=&quot;0&quot;/&gt;
     &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;cmsis&quot; x=&quot;30&quot; y=&quot;240&quot;/&gt;
@@ -676,9 +672,8 @@
         &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;dfp&quot; x=&quot;30&quot; y=&quot;160&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;evsys&quot; x=&quot;30&quot; y=&quot;100&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;nvmctrl&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;tc3&quot; x=&quot;24&quot; y=&quot;384&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;tc4&quot; x=&quot;25&quot; y=&quot;465&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;tcc0&quot; x=&quot;22&quot; y=&quot;304&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;tc4&quot; x=&quot;25&quot; y=&quot;465&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;tcc0&quot; x=&quot;22&quot; y=&quot;304&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -716,7 +711,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_27_CHEN&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -727,7 +722,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;GCLK_ID_27_FREQ&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;48000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -793,7 +788,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_18_0_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -804,7 +799,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_18_0_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;TC3_TimerInterruptHandler&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;TC3_Handler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -815,7 +810,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;NVIC_18_0_HANDLER_LOCK&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -1871,7 +1866,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;PM_APBC_INITIAL_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x13900&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x13100&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2454,7 +2449,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC3_CLOCK_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2465,7 +2460,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC3_CLOCK_FREQUENCY&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;48000000&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2475,9 +2470,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="TC3_INTERRUPT_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC3_INTERRUPT_ENABLE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc3&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -2487,7 +2480,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC3_INTERRUPT_ENABLE_UPDATE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;false&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -2497,9 +2490,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="TC3_INTERRUPT_HANDLER"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC3_INTERRUPT_HANDLER&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc3&quot; value=&quot;TC3_TimerInterruptHandler&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -2508,9 +2499,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="TC3_INTERRUPT_HANDLER_LOCK"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;TC3_INTERRUPT_HANDLER_LOCK&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc3&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -2680,577 +2669,6 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="nvmctrl" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="#&amp;__MCC_Group_Parrent_id"/>
-         <value>__ROOTVIEW</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="CALLBACK_API_NAME"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;CALLBACK_API_NAME&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="COMPARE_SET_API_NAME"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;COMPARE_SET_API_NAME&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc3&quot; value=&quot;TC3_Timer16bitCompareSet&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="COUNTER_GET_API_NAME"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;COUNTER_GET_API_NAME&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc3&quot; value=&quot;TC3_Timer16bitCounterGet&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="FREQUENCY_GET_API_NAME"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;FREQUENCY_GET_API_NAME&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="IRQ_ENUM_NAME"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;IRQ_ENUM_NAME&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="PERIOD_SET_API_NAME"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;PERIOD_SET_API_NAME&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc3&quot; value=&quot;TC3_Timer16bitPeriodSet&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="SYS_TIME_COMPONENT_ID"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;SYS_TIME_COMPONENT_ID&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="SYS_TIME_PLIB_OPERATION_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;SYS_TIME_PLIB_OPERATION_MODE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_CTRLA_COPEN0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_CTRLA_COPEN0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_CTRLC_CPTEN0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_CTRLC_CPTEN0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_CTRLC_CPTEN1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_CTRLC_CPTEN1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_ERR_INTERRUPT_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_ERR_INTERRUPT_MODE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_EVCTRL_MCEO0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_EVCTRL_MCEO0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_EVCTRL_MCEO1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_EVCTRL_MCEO1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_INTSET_MC0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_INTSET_MC0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_INTSET_MC1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_INTSET_MC1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_OVF_INTERRUPT_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_OVF_INTERRUPT_MODE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_TRIGGER_ACTION0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_TRIGGER_ACTION0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CAPTURE_TRIGGER_EDGE0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CAPTURE_TRIGGER_EDGE0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_CC0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_CC0&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Long dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;65535&lt;/Value&gt;
-      &lt;/Long&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_CC1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_CC1&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Long dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;24&lt;/Value&gt;
-      &lt;/Long&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_CTRLA_WAVEGEN"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_CTRLA_WAVEGEN&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_CTRLBSET_DIR"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_CTRLBSET_DIR&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_CTRLBSET_ONESHOT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_CTRLBSET_ONESHOT&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_CTRLC_INVEN0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_CTRLC_INVEN0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_CTRLC_INVEN1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_CTRLC_INVEN1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_EVCTRL_EV"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_EVCTRL_EV&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_EVCTRL_EVACT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_EVCTRL_EVACT&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_EVCTRL_MCEO0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_EVCTRL_MCEO0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_EVCTRL_MCEO1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_EVCTRL_MCEO1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_EVCTRL_OVFEO"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_EVCTRL_OVFEO&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_EVCTRL_TCINV"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_EVCTRL_TCINV&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_INTENSET_MC0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_INTENSET_MC0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_INTENSET_MC1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_INTENSET_MC1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_INTENSET_OVF"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_INTENSET_OVF&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_COMPARE_PERIOD"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_COMPARE_PERIOD&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Long dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;65535&lt;/Value&gt;
-      &lt;/Long&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CTRLA_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CTRLA_MODE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;0&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CTRLA_PRESCALER"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CTRLA_PRESCALER&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_CTRLA_RUNSTDBY"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_CTRLA_RUNSTDBY&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_FREQUENCY"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_FREQUENCY&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_INSTANCE_NAME"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_INSTANCE_NAME&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_NUM_CHANNELS"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_NUM_CHANNELS&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_OPERATION_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_OPERATION_MODE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_SLAVE_MODE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_SLAVE_MODE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_TIMER_CTRLBSET_ONESHOT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_CTRLBSET_ONESHOT&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_TIMER_EVCTRL_EV"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_EVCTRL_EV&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_TIMER_EVCTRL_EVACT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_EVCTRL_EVACT&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_TIMER_EVCTRL_OVFEO"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_EVCTRL_OVFEO&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_TIMER_EVCTRL_TCINV"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_EVCTRL_TCINV&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_TIMER_INTENSET_MC1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_INTENSET_MC1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_TIMER_INTENSET_OVF"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_INTENSET_OVF&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_TIMER_PERIOD"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_PERIOD&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Long dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;65535&lt;/Value&gt;
-      &lt;/Long&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc3&quot; value=&quot;17&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_TIMER_TIME_MS"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_TIME_MS&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;Float dnOrder=&quot;0&quot; id=&quot;max&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;1365333.4&lt;/Value&gt;
-      &lt;/Float&gt;
-    &lt;/Attributes&gt;
-    &lt;Values dnOrder=&quot;1&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;380.0&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TC_TIMER_UNIT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TC_TIMER_UNIT&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;nanosecond&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TIMER_PERIOD_MAX"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TIMER_PERIOD_MAX&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc3&quot; value=&quot;65535&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TIMER_START_API_NAME"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TIMER_START_API_NAME&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TIMER_STOP_API_NAME"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TIMER_STOP_API_NAME&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc3" name="TIMER_WIDTH"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tc3&gt;
-  &lt;tc3 dnOrder=&quot;0&quot; id=&quot;TIMER_WIDTH&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;tc3&quot; value=&quot;16&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/tc3&gt;
-&lt;/tc3&gt;
-</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tc4" name="#&amp;__MCC_Group_Parrent_id"/>
@@ -5570,7 +4988,7 @@
       </entry>
       <entry>
          <file>../src/config/default/interrupts.c</file>
-         <hash>2f95d2de6eab4d974f1f3054cba72ba5f04794ccc86fdff3efd8e5403367372c</hash>
+         <hash>db9e181c797f8f9498a3481efd78d3060c62881f1ba5fc9beed0141e9a8d1b71</hash>
       </entry>
       <entry>
          <file>../src/packs/ATSAMD21G18A_DFP/component/tcc.h</file>
@@ -5578,7 +4996,7 @@
       </entry>
       <entry>
          <file>../src/config/default/interrupts.h</file>
-         <hash>71913c454ff0ade8f67a6bab3c877170463e3dfbdc5c94375e0d9076181cd502</hash>
+         <hash>2b5cd0dd6df80101687aa0fdd5a5c5701feab033e44352148322c7b0449178a4</hash>
       </entry>
       <entry>
          <file>../src/config/default/peripheral/tc/plib_tc_common.h</file>
@@ -5590,7 +5008,7 @@
       </entry>
       <entry>
          <file>../src/config/default/peripheral/clock/plib_clock.c</file>
-         <hash>808815309030601cbd6fad0cf8f9d434df2e21f5ff0e866663d6c091c06ae19c</hash>
+         <hash>c24a1a2ad25f8b4b38e12ad21a247d7deadf12afe32de631100719853ae2c592</hash>
       </entry>
       <entry>
          <file>../src/packs/ATSAMD21G18A_DFP/instance/evsys.h</file>
@@ -5614,7 +5032,7 @@
       </entry>
       <entry>
          <file>../src/config/default/definitions.h</file>
-         <hash>972178332a790b02b16b11ab154c6f563b3f3c8753ca73fdb0ca106853a6b479</hash>
+         <hash>9eb5d0eb7eaf96c76897045f5d414df33eb4b072d10f98565978e1e0d7128378</hash>
       </entry>
       <entry>
          <file>../src/config/default/device.h</file>
@@ -5670,11 +5088,7 @@
       </entry>
       <entry>
          <file>../src/config/default/initialization.c</file>
-         <hash>8c5f29ed8f9e590def30adf14e9775181ffab78e2a9c2c5c06c04cd588dcea56</hash>
-      </entry>
-      <entry>
-         <file>../src/config/default/peripheral/tc/plib_tc3.h</file>
-         <hash>36173921130720b871c8cbb1fccfc4c23e1f05752441386c7b9e34ddf43bfbbf</hash>
+         <hash>549271238123c486808eb7cf07a3a474735a7c925441b2b6f4bf084317a51b7e</hash>
       </entry>
       <entry>
          <file>../src/config/default/toolchain_specifics.h</file>
@@ -5809,10 +5223,6 @@
          <hash>6815edf4f77b464fbf405e19af6bb35f2660e6da64944fc7e975c04607deb869</hash>
       </entry>
       <entry>
-         <file>../src/config/default/peripheral/tc/plib_tc3.c</file>
-         <hash>3ab7d4f1dda4045e1cfe83ca498058e74e40aa27672863eac26ac56302ef380a</hash>
-      </entry>
-      <entry>
          <file>../src/packs/ATSAMD21G18A_DFP/component/evsys.h</file>
          <hash>3c85a8019766226eaf8e4767a5ec67ade5f808270c6e373cb64fba7bc45c9c51</hash>
       </entry>
@@ -5906,7 +5316,7 @@
       </entry>
       <entry>
          <file>../src/config/default/peripheral/nvic/plib_nvic.c</file>
-         <hash>e4049e4aee57a1b7de85af66fd12d65b876ea053eb5b5a99031a0008f218ff6e</hash>
+         <hash>a7964cdce1b9ac7e8ed255ad0fe9e4b2318dcd3b2bedbf732fc0fc37fb7ccab6</hash>
       </entry>
       <entry>
          <file>../src/packs/ATSAMD21G18A_DFP/instance/pac1.h</file>
